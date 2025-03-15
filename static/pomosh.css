@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+/* Анимация печатной машинки для заголовка */
+.typewriter {
+    font-size: 3.5rem;
+    color: #87CEFA;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #87CEFA;
+    animation: typing 3s steps(15, end), blink 0.8s step-end infinite;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.video-container {
+    margin: 20px 0;
+    width: 80%;
+    max-width: 800px;
+    border: 5px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.download-button {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #87CEFA;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.download-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Стили для бургер-меню */
+.burger-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px; /* Перенесено в правый угол */
+    font-size: 2.5rem;
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст (иконка) */
+    border: 1px solid white; /* Белая рамка */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 5px 10px; /* Внутренние отступы */
+    cursor: pointer;
+    z-index: 1000; /* Убедимся, что меню поверх других элементов */
+}
+
+.burger-menu:hover {
+    color: #87CEFA; /* Изменение цвета при наведении */
+}
+
+.offcanvas {
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
+    padding: 20px;
+    border: 4px solid white; /* Белая рамка */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid white; /* Белая линия разделения */
+}
+
+.offcanvas-title {
+    font-size: 1.8rem; /* Размер заголовка */
+}
+
+.list-group-item {
+    background-color: white; /* Белый фон */
+    color: black; /* Черный текст */
+    margin-bottom: 10px; /* Отступ снизу */
+    border: none; /* Без рамки */
+    font-size: 1.3rem; /* Размер текста */
+}
+
+/* Стили ссылок в меню */
+.menu-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1.3rem; /* Размер текста */
+    padding: 5px; /* Внутренние отступы */
+    display: block; /* Блочный элемент */
+    color: black; /* Черный текст */
+    transition: all 0.3s; /* Эффект при наведении */
+}
+
+/* Эффект при наведении на ссылку */
+.menu-link:hover {
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
+    border-radius: 5px; /* Закругленные углы */
+    padding-left: 15px; /* Отступ слева */
+}

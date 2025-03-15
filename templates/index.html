@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Адаптивная рабочая область</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Бургер-меню -->
+    <button class="btn btn-dark burger-menu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+        ☰
+    </button>
+
+    <!-- Меню -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Меню</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="vxod_reg" class="menu-link">Регистрация / Вход</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="profil" class="menu-link">Профиль</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="pomosh" class="menu-link">Помощь</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="about" class="menu-link">О разработчиках</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Видеофон -->
+    <video autoplay muted loop id="background-video" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="{{ url_for('static', filename='оно.mp4') }}" type="video/mp4">
+        Ваш браузер не поддерживает тег видео.
+    </video>
+
+    <h1 class="typewriter">Привет, я NeuroNexus! </h1>
+    <div class="search-bar">
+        <input class="form-control" type="text" placeholder="Поиск...">
+    </div>
+
+    <div class="container">
+        <div class="workspace" id="workspace">
+            <p class="larger-white-text">Перетащите сюда файлы для выбора</p>
+        </div>
+        <div class="square">
+            <p class="larger-white-text" id="readonly-message">Только для чтения</p>
+            <div id="corrected-text-container">
+                {% for result in results %}
+                <p class="larger-white-text">Текст: {{ result.corrected_text }}</p>
+                <ul>
+                    {% for obj in result.detected_objects %}
+                        <li class="larger-white-text"> Объект: {{ obj.label }}</li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+              </div>
+        </div>
+    </div>
+
+    <form action="/upload" method="post" enctype="multipart/form-data" class="functional-panel" onsubmit="hideReadOnlyText()">
+        <input type="file" name="files" accept="image/*" required id="fileInput" multiple class="btn btn-outline-primary larger-white-functional">
+        <input type="submit" value="Загрузить" class="btn btn-outline-success larger-white-functional">
+    </form>
+
+    <div id="fileList" class="file-list"></div>
+
+    <script>
+    const workspace = document.getElementById('workspace');
+    const fileInput = document.getElementById('fileInput');
+    const fileList = document.getElementById('fileList');
+    const form = document.getElementById('uploadForm');
+    const selectFilesBtn = document.getElementById('selectFilesBtn');
+    const readonlyMessage = document.getElementById('readonly-message');
+
+    document.addEventListener('DOMContentLoaded', () => {
+           // Проверяем, есть ли сохраненное состояние
+           const isTextUploaded = localStorage.getItem('isTextUploaded');
+           if (isTextUploaded) {
+               hideReadOnlyText();
+             }
+           });
+
+  function hideReadOnlyText() {
+      // Скрываем сообщение "Только для чтения"
+      readonlyMessage.style.display = 'none';
+
+      // Сохраняем состояние в Local Storage
+      localStorage.setItem('isTextUploaded', 'true');
+  }
+
+  // Обработчик отправки формы
+  document.getElementById('uploadForm').addEventListener('submit', (event) => {
+      event.preventDefault(); // Предотвращаем стандартное поведение
+
+      const fileInput = document.getElementById('fileInput');
+      if (fileInput.files.length === 0) {
+          alert('Пожалуйста, выберите хотя бы один файл для загрузки.'); // Проверка на наличие файлов
+          return;
+      }
+
+      const formData = new FormData(event.target); // Создаем FormData из формы
+
+      fetch('/upload', {
+          method: 'POST',
+          body: formData
+      })
+      .then(response => {
+          if (response.ok) {
+              return response.text(); // Или response.json() если вы ожидаете JSON
+          }
+          throw new Error('Network response was not ok.');
+      })
+      .then(data => {
+          console.log(data); // Обработка ответа от сервера
+          hideReadOnlyText(); // Вызываем функцию для скрытия надписи после успешной загрузки
+      })
+      .catch(error => {
+          console.error('There has been a problem with your fetch operation:', error);
+      });
+  });
+
+    function addFile(file) {
+        const fileItem = document.createElement('div');
+        fileItem.className = 'file-item';
+        fileItem.innerHTML = `
+            <span>${file.name}</span>
+            <span class="remove-btn">✖</span>
+        `;
+        fileList.appendChild(fileItem);
+        fileList.scrollTop = fileList.scrollHeight;
+
+        fileItem.querySelector('.remove-btn').addEventListener('click', () => {
+            fileItem.remove();
+            updateFileInput(); // Обновляем input при удалении файла
+        });
+
+        // Добавляем файл в форму
+        const dataTransfer = new DataTransfer();
+        for (const item of fileInput.files) {
+            dataTransfer.items.add(item);
+        }
+        dataTransfer.items.add(file);
+        fileInput.files = dataTransfer.files; // Обновляем input с файлами
+    }
+
+    // Обновляем input с файлами
+    function updateFileInput() {
+        const dataTransfer = new DataTransfer();
+        for (const item of fileList.children) {
+            const fileName = item.querySelector('span').innerText;
+            const file = Array.from(fileInput.files).find(f => f.name === fileName);
+            if (file) {
+                dataTransfer.items.add(file);
+            }
+        }
+        fileInput.files = dataTransfer.files;
+    }
+
+    // Обработчики событий для перетаскивания
+    workspace.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        workspace.classList.add('drag-over');
+    });
+
+    workspace.addEventListener('dragleave', () => {
+        workspace.classList.remove('drag-over');
+    });
+
+    workspace.addEventListener('drop', (event) => {
+        event.preventDefault();
+        workspace.classList.remove('drag-over');
+        const files = event.dataTransfer.files;
+        for (const file of files) {
+            addFile(file);
+        }
+    });
+
+    // Обработчик для выбора файлов
+    selectFilesBtn.addEventListener('click', () => {
+        fileInput.click(); // Открываем диалог выбора файлов
+    });
+
+    fileInput.addEventListener('change', () => {
+        const files = fileInput.files;
+        for (const file of files) {
+            addFile(file);
+        }
+    });
+
+    // Обработчик отправки формы
+    form.addEventListener('submit', (event) => {
+        event.preventDefault(); // Предотвращаем стандартное поведение
+
+        if (fileInput.files.length === 0) {
+            alert('Пожалуйста, выберите хотя бы один файл для загрузки.'); // Проверка на наличие файлов
+            return;
+        }
+
+        const formData = new FormData(form); // Создаем FormData из формы
+
+        fetch('/upload', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text(); // Или response.json() если вы ожидаете JSON
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+            console.log(data); // Обработка ответа от сервера
+            // Здесь вы можете добавить код для обновления интерфейса после успешной загрузки
+        })
+        .catch(error => {
+            console.error('There has been a problem with your fetch operation:', error);
+        });
+    });
+</script>
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

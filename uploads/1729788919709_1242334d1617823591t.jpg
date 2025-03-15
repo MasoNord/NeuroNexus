@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru">
+<head>
+<base href="https://www.cyberforum.ru/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="keywords" content="форум программистов, компьютерный форум, киберфорум, сайберфорум, компьютеры, программирование, софт, электроника" />
+<meta name="description" content="КиберФорум - форум программистов, системных администраторов, администраторов баз данных, компьютерный форум, форум по электронике и бытовой технике, обсуждение софта. Бесплатная помощь в решении задач по программированию и наукам, решение проблем с компьютером, операционными системам" />
+
+<meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" type="text/css" href="//cyberstatic.net/clientscript/vbulletin_css/cyberforum.css" />
+<link rel="stylesheet" type="text/css" href="//cyberstatic.net/clientscript/vbulletin_important.css" />
+
+
+
+<script>
+<!--
+var SESSIONURL = "";
+var SECURITYTOKEN = "guest";
+var IMGDIR_MISC = "//cyberstatic.net/images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/yui/2.9.0/build/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/yui/2.9.0/build/connection/connection-min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cyberstatic.net/clientscript/custom/jquery.browser.min.js"></script>
+
+<script src="//cyberstatic.net/clientscript/vbulletin_global2.js"></script>
+
+
+<script src="//cyberstatic.net/clientscript/vbulletin_vbpost.js"></script>
+
+
+<script src="//cyberstatic.net/clientscript/vbulletin_md5.js"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Форум программистов и сисадминов Киберфорум RSS Feed" href="https://www.cyberforum.ru/external.php?type=RSS2" />
+	
+
+<link type="application/opensearchdescription+xml" rel="search" href="https://www.cyberforum.ru/opensearch.xml" title="CyberForum.ru" />
+<link rel="stylesheet" href="//cyberstatic.net/clientscript/vbulletin_css/geshi.css" type="text/css" media="screen" />
+<link rel="stylesheet" type="text/css" href="//cyberstatic.net/clientscript/vbulletin_css/spoiler.css" />
+<script>
+	var IMGDIR_BUTTON = "//cyberstatic.net/images/buttons";
+</script>
+
+
+<script async src="https://statika.mpsuadv.ru/scripts/1191.js"></script>
+
+
+
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
+
+
+
+<title>Просмотр вложения - Форум программистов и сисадминов Киберфорум</title>
+</head>
+<body>
+
+
+<div style="min-width: 1100px;  margin: 7px 20px 80px 20px;">
+
+
+<div>
+	<div class="page" style="text-align: left;">
+		<div style="margin: 0px 3px 0px 3px" align="left">
+
+
+<div class="vbmenu_popup" id="vbbloglinks_menu" style="display:none;margin-top:3px" align="left">
+	<table cellpadding="4" cellspacing="1" border="0">
+
+	<tr>
+		<td class="vbmenu_option"><a href="https://www.cyberforum.ru/blogs/recent-entries/">Блоги программистов и сисадминов</a></td>
+	</tr>
+
+	</table>
+</div>
+<table class="tborder" cellpadding="5" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+
+	<td class="alt1" width="100%" style="padding-left: 10px">
+		<a href="https://www.cyberforum.ru/"  style="display: block; float: left; margin: 5px 25px 10px 0px"><img loading="lazy" decoding="async" border="0" src="//cyberstatic.net/images/cyberforum_logo.png" height="50px" alt="Форум программистов, компьютерный форум, киберфорум" title="Форум программистов, компьютерный форум, киберфорум" /></a>
+		<div class="smallfont" style="float: right; margin: 0px 0px 0px 20px;">
+			<div class="ya-share2" data-services="vkontakte,odnoklassniki" data-image="//cyberstatic.net/images/cyberforum_logo.png"></div>
+		</div>
+			
+			<div><h1>Форум программистов и сисадминов Киберфорум</h1><br /><span class="smallfont">КиберФорум - форум программистов и системных администраторов. Бесплатная помощь в решении задач по программированию, математике, физике и другим наукам, решение проблем с компьютером, операционными системами.</span></div>
+		
+	</td>
+
+	<td class="alt2" style="padding: 0px">
+		<table cellpadding="5" cellspacing="3" border="0" width="230px">
+		<tr>
+			<td class="smallfont" style="white-space: nowrap"><b><a href="https://www.cyberforum.ru/auth.php" class="forumtitle2">Войти</a></b></td>
+		</tr>
+		<tr>
+			<td>
+				<b><a href="https://www.cyberforum.ru/register.php">Регистрация</a></b><br/>
+				<a href="https://www.cyberforum.ru/login.php?do=lostpw">Восстановить пароль</a>
+			</td>
+		</tr>
+		</table>
+
+	</td>
+
+</tr>
+</table>
+<div class="tborder" style="padding:1px; border-top-width:0px; margin-bottom: 3px;">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+	<tr align="center">
+		
+		
+
+		<td class="vbmenu_control"><a href="https://www.cyberforum.ru/map.php">Карта форума</a></td>
+
+
+		<td class="vbmenu_control"><a id="vbbloglinks" href="https://www.cyberforum.ru/blogs/">Блоги</a><script>vbmenu_register("vbbloglinks");</script></td>
+		
+			
+			
+				<td class="vbmenu_control"><a href="https://www.cyberforum.ru/groups/">Социальные группы</a></td>
+			
+		
+		
+			
+				<td class="vbmenu_control"><a href="https://www.cyberforum.ru/search.php" accesskey="4">Поиск</a></td>
+				
+				<td class="vbmenu_control"><a href="https://www.cyberforum.ru/search.php?do=getdaily" accesskey="2">Сообщения за день</a></td>
+				
+			
+
+			
+		
+		
+			<td class="vbmenu_control"><a href="https://www.cyberforum.ru/landings/edugram/index.html">Заказать работу</a></td>
+		
+		
+		<td class="vbmenu_control" width="100%">&nbsp;</td>
+		</tr>
+	</table>
+</div>
+
+
+<table id="yatopbanner" cellspacing="0" cellpadding="2" border="0" align="center" width="100%" class="tborder" style="margin: 0px 0px 3px 0px;"><tr>
+<td width="100%" class="alt1" align="center" valign="middle">
+
+<div id="yandex_rtb_R-A-29317-1"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-29317-1',
+    blockId: 'R-A-29317-1'
+  })
+})</script>
+
+
+</td>
+</tr></table>
+
+
+
+
+<div style="width: 600px; height: auto; margin-right: auto;">
+   <div id="movie_video"></div>
+</div>
+<script type="text/javascript" src="https://vak345.com/s.js?v=8d94458a2b7741a172956c4b6a86f3a7" async></script>
+
+<script src='https://ru.viadata.store/tag/load.js?sid=104300' defer  charset='UTF-8' ></script>
+
+
+
+
+
+
+
+<table class="tborder" cellpadding="5" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="tcat"><a href="https://www.cyberforum.ru/">Форум программистов и сисадминов Киберфорум</a></td>
+</tr>
+                <td class="panelsurround" align="center"><br /><br />
+	        <div class="panel" style="width:70%">
+		<br />Просмотр вложений разрешен только со страниц нашего форума. Для просмотра вложения, перейдите по ссылке ниже.<br /><br /> <a href=showthread.php?p=15400368><b>Кликните здесь для перехода к сообщению</b></a>.<br /><br />
+</div><br /><br /></td>
+</tr>
+</table>
+
+<table cellspacing="0" cellpadding="2" border="0" align="center" width="100%" class="tborder" style="margin: 3px 0px 3px 0px;"><tr>
+<td width="100%" class="alt1" align="center" valign="middle">
+
+<div id="yandex_rtb_R-A-29317-24"></div>
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-29317-24",
+        "renderTo": "yandex_rtb_R-A-29317-24",
+        "type": "feed"
+    })
+})
+</script>
+
+</td>
+</tr></table>
+
+
+		</div>
+	</div>
+</div>
+
+<div style="margin: 5px 3px 0px 3px">
+<form action="https://www.cyberforum.ru/index.php" method="get" style="clear:left">
+<table cellpadding="5" cellspacing="0" border="0" class="tborder" align="center" style="width: 100%;">
+<tr>
+	
+	
+		<td class="tfoot">
+			<span class="smallfont">КиберФорум - форум программистов, компьютерный форум, программирование</span>
+		</td>
+	<td class="tfoot" align="right" colspan="2">
+		<div class="smallfont">
+			<strong>
+				<a href="https://www.cyberforum.ru/donate.php">Поддержать</a> -
+				
+				<a href="https://www.cyberforum.ru/advert.php">Реклама</a> -
+				
+				
+				
+				
+				
+				
+				
+				<a href="https://www.cyberforum.ru/sendmessage.php" accesskey="9">Обратная связь</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+<table cellpadding="5" cellspacing="0" border="0" class="tborder" align="center" style="width: 100%;">
+<tr class="alt1" align="right">
+	<td align="left" class="smallfont">
+		Powered by vBulletin<br />Copyright &copy;2000 - 2024, CyberForum.ru
+	</td>
+	<td align="right">
+<img id="licnt3981" width="88" height="31" style="border:0" 
+title="LiveInternet: number of pageviews for 24 hours, of visitors for 24 hours and for today is shown"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP/yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/><script>(function(d,s){d.getElementById("licnt3981").src=
+"//counter.yadro.ru/hit?t12.2;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script>
+
+
+	</td>
+</tr>
+</table>
+</form>
+
+
+<script type='text/javascript' src='https://myroledance.com/services/?id=140437'></script>
+<script type='text/javascript' data-cfasync='false'>
+  let e4b7d1b727_cnt = 0;
+  let e4b7d1b727_interval = setInterval(function(){
+    if (typeof e4b7d1b727_country !== 'undefined') {
+      clearInterval(e4b7d1b727_interval);
+      (function(){
+        var ud;
+        try { ud = localStorage.getItem('e4b7d1b727_uid'); } catch (e) { }
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.charset = 'utf-8';
+        script.async = 'true';
+        script.src = 'https://' + e4b7d1b727_domain + '/' + e4b7d1b727_path + '/' + e4b7d1b727_file + '.js?23402&v=3&u=' + ud + '&a=' + Math.random();
+        document.body.appendChild(script);
+      })();
+    } else {
+      e4b7d1b727_cnt += 1;
+      if (e4b7d1b727_cnt >= 60) {
+        clearInterval(e4b7d1b727_interval);
+      }
+    }
+  }, 500);
+</script>
+
+
+
+
+</div>
+
+<script>
+var krtsts = {
+   "bburl": "https://www.cyberforum.ru"
+};
+</script>
+<script async src="//cyberstatic.net/clientscript/kr_scripts/tests/addedit.js"></script>
+<script async src="//cyberstatic.net/clientscript/kr_scripts/bestanswer/bestanswer.js"></script>
+<script>
+      var krba_options = {
+          img_is_answer: '//cyberstatic.net/images/buttons/is_answer.png',
+          img_is_not_answer: '//cyberstatic.net/images/buttons/is_not_answer.png'
+      },
+      KRBA = new AJAX_KRBA(krba_options);
+</script>
+
+<link rel="stylesheet" type="text/css" href="//cyberstatic.net/clientscript/kr_scripts/thumbsup/thumbs.css" />
+<script>
+var krthumbs = {
+  confirm_delete_pos: 'Вы действительно хотите удалить все положительные оценки?',
+  confirm_delete_neg: 'Вы действительно хотите удалить все отрицательные оценки?'
+}
+</script>
+<script async src="//cyberstatic.net/clientscript/kr_scripts/thumbsup/thumbsup.js"></script>
+
+<script>
+var krtsts = new krtsts_ctrl();
+</script>
+
+<style type="text/css">
+	span.sortarrow {position:absolute;}
+	span.sortarrow img {border:0;}
+	a.sortheader {text-decoration:none; display:block; width:100%;}
+</style>
+
+<script async src="//cyberstatic.net/clientscript/vbulletin_autosave.js"></script>
+<script async src="//cyberstatic.net/clientscript/custom/CtrlPagenav.js"></script>
+<script async src="//cyberstatic.net/clientscript/custom/spoiler.js"></script>
+<script async src="//cyberstatic.net/clientscript/custom/topbutton.js"></script>
+<script async src="//cyberstatic.net/clientscript/sorttable.js"></script>
+
+<script async src="//cyberstatic.net/clientscript/custom/selectcode.js"></script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9SNPZSB2SN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9SNPZSB2SN');
+</script>
+
+<script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(50312308, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/50312308" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+<script async>
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<div id="top-link">
+	<span id="topicon" title="Наверх"></span><span id="toptext">Наверх</span>
+</div>
+
+<script async src="//yastatic.net/share2/share.js"></script>
+</div>
+
+</body>
+</html>

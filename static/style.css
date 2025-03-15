@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.burger-menu {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 2.5rem;
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст (иконка) */
+    border: 1px solid white; /* Белая рамка */
+    z-index: 1000; /* Убедимся, что меню поверх других элементов */
+}
+
+.offcanvas {
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
+    padding: 20px;
+    border: 4px solid white; /* Увеличена толщина рамки */
+    border-radius: 10px; /* Добавлено закругление углов */
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.offcanvas-title {
+    font-size: 1.8rem;
+}
+
+.list-group-item {
+    background-color: white; /* Белый фон */
+    color: black; /* Черный текст */
+    margin-bottom: 10px; /* Отступ снизу */
+    border: none; /* Без рамки */
+    font-size: 1.3rem; /* Размер текста */
+}
+
+/* Стили ссылок в меню */
+.menu-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1.3rem; /* Размер текста */
+    padding: 5px; /* Внутренние отступы */
+    display: block; /* Блочный элемент */
+    color: black; /* Черный текст */
+    transition: all 0.3s; /* Эффект при наведении */
+}
+
+/* Эффект при наведении на ссылку */
+.menu-link:hover {
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
+    border-radius: 5px; /* Закругленные углы */
+    padding-left: 15px; /* Отступ слева */
+}
+
+.typewriter {
+    font-size: 3.5rem;
+    color: #87CEFA;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #87CEFA;
+    animation: typing 3s steps(15, end), blink 0.8s step-end infinite;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.search-bar {
+    width: 50%;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.search-bar input {
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.search-bar input::placeholder {
+    color: black;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.workspace {
+    border: 6px dashed white; /* Толщина рамки увеличена */
+    border-radius: 5px;
+    width: 48%;
+    height: 450px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square {
+    border: 6px solid white; /* Толщина рамки увеличена */
+    border-radius: 5px;
+    width: 48%;
+    height: 450px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.functional-panel {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.larger-white-functional {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    color: white;
+    background-color: black;
+    border-color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.larger-white-functional:hover {
+    background-color: white;
+    color: black;
+}
+
+.file-list {
+    margin-top: 20px;
+    width: 60%;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.8rem;
+    color: black;
+    background-color: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: red;
+}
+
+.remove-btn::before {
+    content: '\1F5D1';
+    margin-right: 5px;
+}
+
+.larger-white-text {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+}

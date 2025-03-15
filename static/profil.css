@@ -1,0 +1,162 @@
+  /* Основной стиль страницы */
+  body {
+    font-family: Arial, sans-serif; /* Установка шрифта */
+    display: flex; /* Использование flexbox для выравнивания */
+    flex-direction: column; /* Элементы расположены в колонку */
+    justify-content: center; /* Центровка по вертикали */
+    align-items: center; /* Центровка по горизонтали */
+    min-height: 100vh; /* Минимальная высота - весь экран */
+    margin: 0; /* Убираем отступы */
+    background-color: black; /* Фон черный */
+    color: black; /* Текст черный */
+
+   
+    
+}
+
+/* Стиль для области с фото профиля */
+.profile-photo {
+    width: 300px; /* Ширина области */
+    height: 300px; /* Высота области */
+    background-color: #ccc; /* Цвет фона серый */
+    display: flex; /* Flexbox для выравнивания */
+    align-items: center; /* Центровка содержимого по вертикали */
+    justify-content: center; /* Центровка содержимого по горизонтали */
+    font-size: 18px; /* Размер текста */
+    color: #666; /* Цвет текста серый */
+    margin-right: 20px; /* Отступ справа */
+    position: relative; /* Для размещения внутренних элементов */
+    border: 6px solid white; /* Белая рамка */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+/* Кнопка редактирования фото */
+.edit-photo {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 10px; /* Отступ снизу */
+    right: 10px; /* Отступ справа */
+    background: rgba(255, 255, 255, 0.5); /* Прозрачный белый фон */
+    color: black; /* Цвет текста черный */
+    padding: 5px 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор в виде руки */
+}
+
+/* Блок для дополнительной информации */
+.details-block {
+    width: 650px;
+    padding: 15px; /* Внутренние отступы */
+
+    border-radius: 10px; /* Закругленные углы */
+    margin-top: 20px; /* Отступ сверху */
+
+    color: black; /* Текст черный */
+    font-size: 30px;
+    
+}
+
+/* Рабочая область */
+/* Рабочая область */
+.workspace {
+    border: 6px dashed white; /* Белая пунктирная рамка */
+    border-radius: 50px; /* Закругленные углы */
+    width: 25%; /* Уменьшенная ширина - четверть страницы */
+    height: 300px; /* Высота области */
+    text-align: center; /* Центровка текста */
+    color: black; /* Цвет текста черный */
+    font-size: 2.5rem; /* Размер текста */
+    position: absolute; /* Абсолютное позиционирование */
+    right: 0; /* Сдвиг области вправо */
+    top: 50%; /* Центровка по вертикали */
+    transform: translateY(-50%); /* Коррекция центровки */
+    background-color: #2575fc;
+}
+
+
+/* Эффект печатной машинки для заголовка */
+.typewriter {
+    font-size: 3.5rem; /* Размер текста */
+    color: #87CEFA; /* Голубой цвет текста */
+    font-weight: bold; /* Жирный текст */
+    white-space: nowrap; /* Текст в одну строку */
+    overflow: hidden; /* Прячем лишний текст */
+    border-right: 3px solid #87CEFA; /* Голубая мигающая граница */
+    animation: typing 3s steps(15, end), blink 0.8s step-end infinite; /* Анимации */
+    text-align: center; /* Центровка текста */
+    margin-bottom: 30px; /* Отступ снизу */
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Анимация печати */
+@keyframes typing {
+    from {
+        width: 0; /* Начинаем с нулевой ширины */
+    }
+    to {
+        width: 50%; /* Заканчиваем полной шириной */
+    }
+}
+
+/* Анимация мигания курсора */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Полупрозрачная граница */
+    }
+}
+
+/* Стиль для кнопки бургер-меню */
+.burger-menu {
+    position: fixed; /* Фиксация в одном месте */
+    top: 10px; /* Отступ сверху */
+    right: 10px; /* Отступ справа */
+    font-size: 2.5rem; /* Размер текста */
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст (иконка) */
+    border: 1px solid white; /* Белая рамка */
+    z-index: 1000; /* Убедимся, что меню поверх других элементов */
+}
+
+/* Стиль для всего меню (offcanvas) */
+.offcanvas {
+    background-color: black; /* Черный фон */
+}
+
+/* Стиль для заголовка меню */
+.offcanvas-title {
+    color: white; /* Белый текст */
+}
+
+/* Кнопка закрытия меню */
+.btn-close {
+    filter: invert(1); /* Иконка белая */
+}
+
+/* Элементы списка меню */
+.list-group-item {
+    margin-bottom: 10px; /* Отступ снизу */
+    border: none; /* Без рамки */
+    background-color: white; /* Белый фон */
+    color: black; /* Черный текст */
+    font-size: 1.3rem; /* Размер текста */
+}
+
+/* Стили ссылок в меню */
+.menu-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1.3rem; /* Размер текста */
+    padding: 5px; /* Внутренние отступы */
+    display: block; /* Блочный элемент */
+    color: black; /* Черный текст */
+    transition: all 0.3s; /* Эффект при наведении */
+}
+
+/* Эффект при наведении на ссылку */
+.menu-link:hover {
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
+    border-radius: 5px; /* Закругленные углы */
+    padding-left: 15px; /* Отступ слева */
+}

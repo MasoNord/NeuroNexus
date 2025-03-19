@@ -1,5 +1,5 @@
 from registration_form import db
-import mysql.connector
+# import mysql.connector
 import bcrypt
 
 class Accounts(db.Model):

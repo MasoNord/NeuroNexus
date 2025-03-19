@@ -1,4 +1,4 @@
-# NeuroNexus
+## NeuroNexus
 
 # Как пользоваться
 
@@ -17,3 +17,12 @@
 7. Получите обнаруженный текст, исправленный текст и обнаруженные объекты в области обозначенной сплошной линией
 
 8. Для наглядного примера, можете скачайте файл Pomosh.mp4 который содержиться в репозиторие
+
+# Как запустить через Docker
+
+Работаем без Docker-Compose, чисто Dokerfile.
+
+```
+root@server-tihfyr:~# cd NeuroNexus
+root@server-tihfyr:~/NeuroNexus# docker build --tag neuronexus .
+```

@@ -1,0 +1,11 @@
+flask==3.1.0
+torch==2.6.0
+torchvision==0.21.0
+symspellpy==6.9.0
+easyocr==1.7.2
+Flask-WTF==1.2.2
+WTForms==3.2.1
+bcrypt==4.3.0
+Flask-SQLAlchemy==3.1.1
+flask_bcrypt==1.0.1
+flask_login==0.6.3
